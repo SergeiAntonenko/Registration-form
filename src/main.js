@@ -1,2 +1,2 @@
-import "./js/timer.js";
-import "./js/registration-form.js";
+import "./src/js/timer.js";
+import "./src/js/registration-form.js";
