@@ -332,6 +332,11 @@
   line-height: 1.5;
   border: none;
   outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.modal-register-form-input.allert {
+  border: 1px solid red;
 }
 
 .modal-register-form-input::placeholder {
