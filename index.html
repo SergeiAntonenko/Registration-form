@@ -22,6 +22,7 @@
   <body>
     <section class="webinar">
       <div class="container webinar-container">
+        <img class="layer" src="./src/images/layer.png" alt="layer" />
         <picture class="back-img">
           <source
             media="(max-width: 767.98px)"
@@ -29,8 +30,13 @@
             type="image/png"
           />
           <source
-            media="(min-width: 768px)"
+            media="(min-width: 768px) and (max-width: 1439.98px)"
             srcset="./src/images/back-img-tablet.png"
+            type="image/png"
+          />
+          <source
+            media="(min-width: 1440px)"
+            srcset="./src/images/back-img-desk.png"
             type="image/png"
           />
           <img src="./src/images/back-img.png" alt="image" />

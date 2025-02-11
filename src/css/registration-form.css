@@ -408,8 +408,8 @@
   line-height: 1.5;
 }
 
-.modal-register-btn:hover {
-  background-color: rgb(14, 110, 59);
+.layer {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -499,14 +499,20 @@
     display: block;
     position: static;
     max-width: 336px;
-    max-height: 518px;
+    height: 518px;
     padding: 32px 20px;
-    top: 81px;
-    right: 32px;
   }
 
   .modal-nav {
     display: none;
+  }
+
+  .modal-register-btn:hover {
+    background-color: rgb(14, 110, 59);
+  }
+
+  .modal-register-btn {
+    height: 64px;
   }
 
   .formula {
@@ -603,8 +609,140 @@
 
 @media screen and (min-width: 1440px) {
   .webinar-container {
-    display: flex;
     gap: 104px;
-    background-image: url("../images/table-decor-tablet.png");
+    background-image: url("../images/table-decor-desk.png");
+  }
+
+  .webinar-info {
+    max-width: 624px;
+  }
+
+  .webinar-info-subtitle-container {
+    padding-top: 88px;
+    padding-bottom: 40px;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .webinar-info-title {
+    font-size: 56px;
+    line-height: 1.22;
+    padding-bottom: 40px;
+  }
+
+  .webinar-info-title .nowrap {
+    white-space: normal;
+  }
+
+  .webinar-info-text {
+    max-width: 554px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .modal-wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .modal {
+    max-width: 488px;
+    height: 580px;
+    padding: 52px;
+  }
+
+  .webinar-register-title {
+    font-size: 28px;
+    line-height: 1.14;
+  }
+
+  .webinar-register-timer {
+    max-width: 254px;
+  }
+
+  .webinar-register-timer-value {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 700;
+  }
+
+  .back-img {
+    width: 312px;
+    height: 240px;
+  }
+
+  .formula.one {
+    max-width: 267px;
+    font-weight: normal;
+    top: 40px;
+    left: 1196px;
+  }
+
+  .formula.one br {
+    display: none;
+  }
+
+  .formula.two {
+    font-weight: 500;
+    top: 18px;
+    left: 425px;
+  }
+
+  .formula.three {
+    font-size: 24px;
+    line-height: 1.17;
+    font-weight: normal;
+
+    bottom: 60px;
+    left: 155px;
+  }
+
+  .formula.five {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 500;
+    bottom: -10px;
+    left: 522px;
+    rotate: 16.5deg;
+  }
+
+  .layer {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+  }
+
+  .vector-img {
+    width: 82px;
+    height: 82px;
+    transform: rotateZ(18deg) rotateX(180deg);
+    bottom: 152px;
+    right: -18px;
+  }
+
+  .rectangle.one {
+    top: 150px;
+    right: -610px;
+  }
+
+  .rectangle.two {
+    bottom: 312px;
+    right: -638px;
+  }
+
+  .rectangle.five {
+    bottom: 46px;
+    right: -275px;
+  }
+
+  .rectangle.six {
+    bottom: 438px;
+    right: -680px;
+  }
+
+  .rectangle.seven {
+    bottom: -8px;
+    left: 700px;
   }
 }
