@@ -65,6 +65,9 @@ async function onFormSubmit(e) {
       if (window.innerWidth < 768) {
         modal.classList.remove("is-visible");
       }
+      formInputs.forEach((input) => {
+        input.classList.remove("allert");
+      });
       registerForm.reset();
     } else {
       console.error("Помилка відправки форми:", response.status);
@@ -75,6 +78,10 @@ async function onFormSubmit(e) {
     if (window.innerWidth < 768) {
       modal.classList.remove("is-visible");
     }
+
+    formInputs.forEach((input) => {
+      input.classList.remove("allert");
+    });
     registerForm.reset();
   }
 }
