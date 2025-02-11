@@ -6,7 +6,7 @@
 .webinar-container {
   background-image: url("../images/table-decor.png");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right top;
   position: relative;
   overflow: hidden;
 }
@@ -120,6 +120,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40px;
 }
 
 .webinar-register-timer-value {
@@ -177,7 +178,7 @@
 .rectangle.one {
   width: 6px;
   height: 6px;
-  top: 180px;
+  top: 210px;
   right: 27px;
 }
 
@@ -202,6 +203,18 @@
   left: 80px;
 }
 
+.rectangle.five {
+  display: none;
+}
+
+.rectangle.six {
+  display: none;
+}
+
+.rectangle.seven {
+  display: none;
+}
+
 .formula {
   font-family: "Gotham Pro", serif;
   font-size: 14px;
@@ -215,8 +228,12 @@
 .formula.one {
   color: rgba(151, 195, 171, 1);
 
-  top: 9px;
+  top: 13px;
   left: 253px;
+}
+
+.formula.one br {
+  display: none;
 }
 
 .formula.two {
@@ -224,7 +241,7 @@
   font-style: italic;
   rotate: 16.5deg;
 
-  top: 81px;
+  top: 115px;
   left: 238px;
 }
 
@@ -233,7 +250,7 @@
   line-height: 1.4;
   rotate: -30deg;
 
-  bottom: 162px;
+  bottom: 156px;
   left: 235px;
 }
 
@@ -244,6 +261,10 @@
 
   bottom: -27px;
   left: -19px;
+}
+
+.formula.five {
+  display: none;
 }
 
 .back-img {
@@ -259,12 +280,15 @@
 
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
   max-width: 360px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 0px 20px;
   background-color: rgba(255, 255, 255, 1);
+  top: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .is-visible {
@@ -310,6 +334,10 @@
   outline: none;
 }
 
+.modal-register-form-input::placeholder {
+  color: rgba(118, 123, 142, 1);
+}
+
 .modal-register-form-input:focus {
   outline: 1px solid rgb(189, 191, 198);
 }
@@ -330,13 +358,6 @@
   line-height: 1.33;
   padding-bottom: 12px;
 }
-
-/* .modal-register-form-checkbox {
-  flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(15, 124, 65, 1);
-} */
 
 .modal-register-form-checkbox {
   position: relative;
@@ -389,4 +410,201 @@
 
 .modal-register-btn:hover {
   background-color: rgb(14, 110, 59);
+}
+
+@media screen and (min-width: 768px) {
+  .webinar-container {
+    display: flex;
+    gap: 32px;
+    background-image: url("../images/table-decor-tablet.png");
+  }
+
+  .webinar-info {
+    max-width: 336px;
+  }
+
+  .webinar-info-subtitle-container {
+    padding-top: 45px;
+    padding-bottom: 24px;
+    gap: 12px;
+  }
+
+  .webinar-info-subtitle {
+    height: 36px;
+    padding: 6px 16px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.07em;
+    text-align: center;
+  }
+
+  .webinar-info-subtitle.big {
+    max-width: 238px;
+  }
+
+  .webinar-info-subtitle.small {
+    max-width: 226px;
+    letter-spacing: 0.07em;
+  }
+
+  .corner {
+    width: 4px;
+    height: 4px;
+  }
+
+  .left-top {
+    top: -3px;
+    left: -3px;
+  }
+
+  .right-top {
+    top: -3px;
+    right: -3px;
+  }
+
+  .left-bottom {
+    bottom: -3px;
+    left: -3px;
+  }
+
+  .right-bottom {
+    bottom: -3px;
+    right: -3px;
+  }
+
+  .webinar-info-title {
+    font-size: 36px;
+    line-height: 1.22;
+    padding-bottom: 24px;
+  }
+
+  .webinar-info-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .webinar-register {
+    display: none;
+  }
+
+  .modal-wrapper {
+    padding-top: 51px;
+    padding-bottom: 51px;
+    z-index: 999;
+  }
+
+  .modal {
+    display: block;
+    position: static;
+    max-width: 336px;
+    max-height: 518px;
+    padding: 32px 20px;
+    top: 81px;
+    right: 32px;
+  }
+
+  .modal-nav {
+    display: none;
+  }
+
+  .formula {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .formula.one {
+    top: 10px;
+    left: 546px;
+  }
+
+  .formula.one br {
+    display: block;
+  }
+
+  .formula.two {
+    top: -4px;
+    left: 142px;
+  }
+
+  .formula.three {
+    font-size: 20px;
+
+    bottom: 18px;
+    left: -52px;
+  }
+
+  .formula.four {
+    font-weight: 700;
+    rotate: 15deg;
+
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .formula.five {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: italic;
+    bottom: 4px;
+    left: 210px;
+    rotate: 16.5deg;
+  }
+
+  .vector-img {
+    width: 48px;
+    height: 48px;
+    transform: rotateZ(20deg) rotateX(180deg);
+    bottom: 106px;
+    right: 12px;
+  }
+
+  .rectangle.one {
+    width: 10px;
+    height: 10px;
+    top: 172px;
+    right: -386px;
+  }
+
+  .rectangle.two {
+    width: 20px;
+    height: 20px;
+    bottom: 212px;
+    right: -404px;
+  }
+
+  .rectangle.five {
+    display: block;
+    width: 20px;
+    height: 20px;
+    bottom: 24px;
+    right: -88px;
+  }
+
+  .rectangle.six {
+    display: block;
+    width: 10px;
+    height: 10px;
+    bottom: 66px;
+    right: 42px;
+  }
+
+  .rectangle.seven {
+    display: block;
+    width: 10px;
+    height: 10px;
+    bottom: -20px;
+    left: 174px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .webinar-container {
+    display: flex;
+    gap: 104px;
+    background-image: url("../images/table-decor-tablet.png");
+  }
 }

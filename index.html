@@ -22,20 +22,39 @@
   <body>
     <section class="webinar">
       <div class="container webinar-container">
-        <img class="back-img" src="./src/images/back-img.png" alt="image" />
-        <div class="formula one">SUMIF(C3:C12,’’>70,000’’)</div>
-        <div class="logo">
-          <a href="/"
-            ><img class="logo-img" src="./src/images/logo.svg" alt="logo"
-          /></a>
-        </div>
+        <picture class="back-img">
+          <source
+            media="(max-width: 767.98px)"
+            srcset="./src/images/back-img.png"
+            type="image/png"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./src/images/back-img-tablet.png"
+            type="image/png"
+          />
+          <img src="./src/images/back-img.png" alt="image" />
+        </picture>
+
+        <div class="formula one">SUMIF(C3:C12,’’>70,000<br />’’)</div>
+
         <div class="webinar-info">
+          <div class="logo">
+            <a href="https://sergeiantonenko.github.io/Registration-form/"
+              ><img class="logo-img" src="./src/images/logo.svg" alt="logo"
+            /></a>
+          </div>
           <div class="rectangle one"></div>
           <div class="rectangle two"></div>
+          <div class="rectangle five"></div>
+          <div class="rectangle six"></div>
+          <div class="rectangle seven"></div>
+
           <div class="formula two">
             <span class="nowrap">f(x) = MIN(E2:E5)</span>
           </div>
           <div class="formula three">AVERAGE(B2+D2)</div>
+          <div class="formula five">SUM(A1+B4)</div>
           <div class="webinar-info-subtitle-container">
             <div class="webinar-info-subtitle big">
               <div class="corner left-top"></div>
@@ -98,98 +117,106 @@
           <div class="rectangle four"></div>
           <div class="formula four">SUM(A1+B4)</div>
         </div>
-      </div>
-      <div class="modal">
-        <div class="modal-nav">
-          <div class="logo">
-            <a href="/"
-              ><img class="logo-img" src="./src/images/logo.svg" alt="logo"
-            /></a>
-          </div>
-          <div class="modal-close">
-            <button class="modal-close-btn" type="button">
-              <img
-                class="modal-close-img"
-                src="./src/images/close.svg"
-                alt="logo"
-              />
-            </button>
-          </div>
-        </div>
-        <div class="modal-web-register">
-          <div class="webinar-register-title">Реєструйся просто зараз</div>
-          <div class="webinar-register-timer">
-            <div class="webinar-register-timer-field">
-              <span class="webinar-register-timer-value" data-days>00</span>
-              <span class="webinar-register-timer-label">днів</span>
+        <div class="modal-wrapper">
+          <div class="modal">
+            <div class="modal-nav">
+              <div class="logo">
+                <a href="https://sergeiantonenko.github.io/Registration-form/"
+                  ><img class="logo-img" src="./src/images/logo.svg" alt="logo"
+                /></a>
+              </div>
+              <div class="modal-close">
+                <button class="modal-close-btn" type="button">
+                  <img
+                    class="modal-close-img"
+                    src="./src/images/close.svg"
+                    alt="logo"
+                  />
+                </button>
+              </div>
             </div>
-            <div class="webinar-register-timer-colon">:</div>
-            <div class="webinar-register-timer-field">
-              <span class="webinar-register-timer-value" data-hours>00</span>
-              <span class="webinar-register-timer-label">годин</span>
-            </div>
-            <div class="webinar-register-timer-colon">:</div>
-            <div class="webinar-register-timer-field">
-              <span class="webinar-register-timer-value" data-minutes>00</span>
-              <span class="webinar-register-timer-label">хвилин</span>
-            </div>
-            <div class="webinar-register-timer-colon">:</div>
-            <div class="webinar-register-timer-field">
-              <span class="webinar-register-timer-value seconds" data-seconds
-                >00</span
-              >
-              <span class="webinar-register-timer-label">секунд</span>
-            </div>
-          </div>
-          <form class="modal-register-form">
-            <input
-              class="modal-register-form-input"
-              type="text"
-              name="user-name"
-              id="user-name"
-              placeholder="Введи своє ім’я"
-              required
-            />
-            <input
-              class="modal-register-form-input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Введи свій E-mail"
-              required
-            />
-            <input
-              class="modal-register-form-input flag"
-              type="tel"
-              name="phone-number"
-              id="phone-number"
-              placeholder="+380 95 -- -- ---"
-              required
-            />
-            <label class="modal-register-form-label" for="form-checkbox">
-              <input
-                class="modal-register-form-checkbox"
-                type="checkbox"
-                name="form-checkbox"
-                id="form-checkbox"
-                required
-              />
-              <div>
-                Згоден з
-                <a class="modal-register-form-link" href="#"
-                  >Політика конфеденційності</a
+            <div class="modal-web-register">
+              <div class="webinar-register-title">Реєструйся просто зараз</div>
+              <div class="webinar-register-timer">
+                <div class="webinar-register-timer-field">
+                  <span class="webinar-register-timer-value" data-days>00</span>
+                  <span class="webinar-register-timer-label">днів</span>
+                </div>
+                <div class="webinar-register-timer-colon">:</div>
+                <div class="webinar-register-timer-field">
+                  <span class="webinar-register-timer-value" data-hours
+                    >00</span
+                  >
+                  <span class="webinar-register-timer-label">годин</span>
+                </div>
+                <div class="webinar-register-timer-colon">:</div>
+                <div class="webinar-register-timer-field">
+                  <span class="webinar-register-timer-value" data-minutes
+                    >00</span
+                  >
+                  <span class="webinar-register-timer-label">хвилин</span>
+                </div>
+                <div class="webinar-register-timer-colon">:</div>
+                <div class="webinar-register-timer-field">
+                  <span
+                    class="webinar-register-timer-value seconds"
+                    data-seconds
+                    >00</span
+                  >
+                  <span class="webinar-register-timer-label">секунд</span>
+                </div>
+              </div>
+              <form class="modal-register-form">
+                <input
+                  class="modal-register-form-input"
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  placeholder="Введи своє ім’я"
+                  required
+                />
+                <input
+                  class="modal-register-form-input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Введи свій E-mail"
+                  required
+                />
+                <input
+                  class="modal-register-form-input flag"
+                  type="tel"
+                  name="phone-number"
+                  id="phone-number"
+                  placeholder="+380 95 -- -- ---"
+                  required
+                />
+                <label class="modal-register-form-label" for="form-checkbox">
+                  <input
+                    class="modal-register-form-checkbox"
+                    type="checkbox"
+                    name="form-checkbox"
+                    id="form-checkbox"
+                    required
+                  />
+                  <div>
+                    Згоден з
+                    <a class="modal-register-form-link" href="#"
+                      >Політика конфеденційності</a
+                    >
+                    та
+                    <a class="modal-register-form-link" href="#"
+                      >Умови користування</a
+                    >
+                    послугами
+                  </div></label
                 >
-                та
-                <a class="modal-register-form-link" href="#"
-                  >Умови користування</a
-                >
-                послугами
-              </div></label
-            >
-            <button class="modal-register-btn" type="submit">
-              Зареєструватися
-            </button>
-          </form>
+                <button class="modal-register-btn" type="submit">
+                  Зареєструватися
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
