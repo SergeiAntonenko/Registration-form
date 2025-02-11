@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const modal = document.querySelector(".modal");
 const closeModalBtn = document.querySelector(".modal-close-btn");
 const openModalBtn = document.querySelector(".webinar-register-btn");
@@ -53,19 +51,30 @@ async function onFormSubmit(e) {
   const formData = { name, email, phone };
 
   try {
-    const response = await axios.post("https://example.com/register", formData);
-    console.log(response.status);
+    const response = await fetch("https://example.com/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    if (window.innerWidth < 768) {
-      modal.classList.remove("is-visible");
+    if (response.ok) {
+      console.log("Форма успішно відправлена!");
+
+      if (window.innerWidth < 768) {
+        modal.classList.remove("is-visible");
+      }
+      registerForm.reset();
+    } else {
+      console.error("Помилка відправки форми:", response.status);
     }
-    registerForm.reset();
   } catch (error) {
+    console.error("Помилка:", error);
+
     if (window.innerWidth < 768) {
       modal.classList.remove("is-visible");
     }
-
-    console.error(error);
     registerForm.reset();
   }
 }
